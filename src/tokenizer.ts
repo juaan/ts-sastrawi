@@ -1,4 +1,5 @@
-export function tokenize(sentence: string): string {
+
+export default function tokenize(sentence: string): string {
     const toLowerCaseSentence = sentence.toLowerCase();
     return toLowerCaseSentence
 }
