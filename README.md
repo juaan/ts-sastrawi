@@ -2,10 +2,11 @@ Hi guys
 
 ## TODO
 
-- [ ] Tokenizer functionality *on progress*
-- [ ] Unit Test Tokenizer *on progress*
+- [x] Tokenizer functionality
+- [x] Unit Test Tokenizer
+- [x] Dictionary functionality
+- [x] Unit Test Dictionary
 - [ ] Stemmer Fucntionality
 - [ ] Unit Test Stemmer
-- [ ] infix removal & loopPengembalianAkhiran 
+- [ ] infix removal & loopPengembalianAkhiran
 - [ ] add documentation
-- [ ] update readme
