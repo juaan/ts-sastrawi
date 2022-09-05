@@ -8,7 +8,7 @@ test("Testing default dictionary contain function", () => {
 });
 
 test("Testing default dictionary delete function", () => {
-  const newDict = new sastrawi.dictionary(["mantab", "keren"]);
+  const newDict = new sastrawi.Dictionary(["mantab", "keren"]);
   newDict.add(["budi"]);
   expect(newDict.contains("budi")).toEqual(true);
   newDict.remove(["budi"]);
