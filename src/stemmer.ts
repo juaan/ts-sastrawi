@@ -206,7 +206,6 @@ class Stemmer {
       }
 
       currentPrefix = result.slice(0, 2);
-      console.log("currentPrefix & result", currentPrefix, result);
       if (currentPrefix === removedPrefix) {
         break;
       }
@@ -214,7 +213,6 @@ class Stemmer {
       const removePrefixResult = this.removePrefix(result);
       removedPrefix = removePrefixResult.prefix;
       result = removePrefixResult.result;
-      console.log("removedPrefix & result", removedPrefix, result);
       if (this.dictionary.contains(result)) {
         return {
           word: result,
