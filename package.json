@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/anthonyjuan/js-sastrawi.git"
+    "url": "git+https://github.com/juaan/ts-sastrawi.git"
   },
   "author": "Anthony Juan <anthonyjuan95@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/anthonyjuan/js-sastrawi/issues"
+    "url": "https://github.com/juaan/ts-sastrawi/issues"
   },
-  "homepage": "https://github.com/anthonyjuan/js-sastrawi#readme",
+  "homepage": "https://github.com/juaan/ts-sastrawi#readme",
   "devDependencies": {
     "@types/jest": "^25.2.1",
     "jest": "^25.2.7",
