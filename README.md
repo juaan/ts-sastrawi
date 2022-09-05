@@ -1,6 +1,6 @@
-# js-sastrawi
+# ts-sastrawi
 
-js-sastrawi is a javascript package for doing stemming in Indonesian language written using typescript. It is based from [Sastrawi](https://github.com/sastrawi/sastrawi) for PHP by [Andy Librian](https://github.com/andylibrian).
+ts-sastrawi is a typescript package for doing stemming in Indonesian language. It is based from [Sastrawi](https://github.com/sastrawi/sastrawi) for PHP by [Andy Librian](https://github.com/andylibrian).
 
 js-sastrawi adalah package javascript untuk melakukan _stemming_ pada bahasa Indonesia yang ditulis menggunakan typescript. Dikembangkan dari [Sastrawi](https://github.com/sastrawi/sastrawi) untuk PHP yang dibuat oleh [Andy Librian](https://github.com/andylibrian).
 
@@ -16,7 +16,7 @@ Dari [Wikipedia](https://en.wikipedia.org/wiki/Stemming), _stemming_ adalah pros
 Penggunaan yang paling sederhana adalah dengan menggunakan kamus kata dasar default yang telah disediakan :
 
 ```javascript
-import stemmer from "js-sastrawi";
+import sastrawi from "js-sastrawi";
 
 const defaultDictionary = sastrawi.defaultDictionary();
 const stemmer = new sastrawi.Stemmer(defaultDictionary);
@@ -26,7 +26,7 @@ console.log(stemmer.stem("menyukai")); // suka
 Selain menggunakan kamus kata dasar default, user juga dapat membuat kamus kata dasar sendiri :
 
 ```javascript
-import stemmer from "js-sastrawi";
+import sastrawi from "js-sastrawi";
 
 const dictionaryCustom = new sastrawi.Dictionary(["aku", "ingin", "tahu"]);
 dictionaryCustom.add("gaul");

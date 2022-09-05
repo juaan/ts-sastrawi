@@ -1,7 +1,7 @@
 {
-  "name": "js-sastrawi",
+  "name": "ts-sastrawi",
   "version": "1.0.0",
-  "description": "js-sastrawi is a js package for doing stemming in Indonesian language. It is based from Sastrawi for PHP by Andy Librian.",
+  "description": "ts-sastrawi is a ts package for doing stemming in Indonesian language. It is based from Sastrawi for PHP by Andy Librian.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
