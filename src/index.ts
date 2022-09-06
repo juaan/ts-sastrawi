@@ -4,12 +4,11 @@ import defaultDictionary from "./dictionary-default";
 import defaultStopWord from "./dictionary-stopword";
 import Stemmer from "./stemmer";
 
-const sastrawi = {
+
+export {
   tokenize,
   Dictionary,
   defaultDictionary,
   defaultStopWord,
   Stemmer,
 };
-
-export default sastrawi;

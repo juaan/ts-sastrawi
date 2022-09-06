@@ -9,13 +9,16 @@
     "target": "es5",
     "outDir": "./dist",
     "moduleResolution": "node",
+    "rootDir": "./src",
+    "sourceMap": true,
   },
   "typedocOptions": {
     "mode": "modules",
     "out": "docs"
   },
   "include": [
-    "src/*"
+    "src",
+    "types"
   ],
   "exclude": [
       "node_modules",
