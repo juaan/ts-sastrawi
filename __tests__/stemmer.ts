@@ -1,4 +1,4 @@
-import sastrawi from "../src/index";
+import {Dictionary, Stemmer} from "../src/index";
 
 type testItem = {
   value: string;
@@ -165,7 +165,7 @@ describe("Testing Stem function", () => {
     { value: "nikmat-Ku", expected: "nikmat" },
     { value: "allah-lah", expected: "allah" },
   ];
-  const dictionaryCustom = new sastrawi.Dictionary([
+  const dictionaryCustom = new Dictionary([
     "hancur",
     "benar",
     "apa",
@@ -293,7 +293,7 @@ describe("Testing Stem function", () => {
     "allah",
   ]);
 
-  const stemmer = new sastrawi.Stemmer(dictionaryCustom);
+  const stemmer = new Stemmer(dictionaryCustom);
 
   testItems.forEach((item) => {
     const result = stemmer.stem(item.value);

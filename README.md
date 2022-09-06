@@ -1,5 +1,7 @@
 # ts-sastrawi
 
+[![GitHub license](https://img.shields.io/github/license/juaan/ts-sastrawi)](https://github.com/juaan/ts-sastrawi/blob/master/LICENSE)
+
 ts-sastrawi is a typescript package for doing stemming in Indonesian language. It is based from [Sastrawi](https://github.com/sastrawi/sastrawi) for PHP by [Andy Librian](https://github.com/andylibrian).
 
 ts-sastrawi adalah package javascript untuk melakukan _stemming_ pada bahasa Indonesiaxs. Dikembangkan dari [Sastrawi](https://github.com/sastrawi/sastrawi) untuk PHP yang dibuat oleh [Andy Librian](https://github.com/andylibrian).
@@ -16,28 +18,28 @@ Dari [Wikipedia](https://en.wikipedia.org/wiki/Stemming), _stemming_ adalah pros
 Penggunaan yang paling sederhana adalah dengan menggunakan kamus kata dasar default yang telah disediakan :
 
 ```javascript
-import sastrawi from "ts-sastrawi";
+import {defaultDictionary, Stemmer} from "ts-sastrawi";
 
-const defaultDictionary = sastrawi.defaultDictionary();
-const stemmer = new sastrawi.Stemmer(defaultDictionary);
+const dictionary = defaultDictionary();
+const stemmer = new Stemmer(dictionary);
 console.log(stemmer.stem("menyukai")); // suka
 ```
 
 Selain menggunakan kamus kata dasar default, user juga dapat membuat kamus kata dasar sendiri :
 
 ```javascript
-import sastrawi from "ts-sastrawi";
+import {Dictionary, NewStemmer, tokenize} from "ts-sastrawi";
 
-const dictionaryCustom = new sastrawi.Dictionary(["aku", "ingin", "tahu"]);
+const dictionaryCustom = new Dictionary(["aku", "ingin", "tahu"]);
 dictionaryCustom.add("gaul");
-console.log(dictionaryCustom.count()); // 3
+console.log(dictionaryCustom.count()); // 4
 
-const stemmer = sastrawi.NewStemmer(dictionaryCustom);
+const stemmer = NewStemmer(dictionaryCustom);
 const sentence = "aku ingin mengetahui";
-const tokenizeWord = stemmer.tokenize(sentence);
+const tokenizeWord = tokenize(sentence);
 
 tokenizeWord.forEach((word) => {
-  console.log(`${word} => ${stemmer.stem(word)}`);
+  console.log(`${word} => ${stemmer.stem(word)}`); // aku ingin tahu
 });
 ```
 

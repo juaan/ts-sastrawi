@@ -1,14 +1,14 @@
-import sastrawi from "../src/index";
+import {defaultDictionary, defaultStopWord, Dictionary} from "../src/index";
 
 test("Testing default dictionary contain function", () => {
-  const defaultDictionary = sastrawi.defaultDictionary();
-  const defaultStopWord = sastrawi.defaultStopWord();
-  expect(defaultDictionary.contains("abidin")).toEqual(true);
-  expect(defaultStopWord.contains("tiba")).toEqual(true);
+  const dict = defaultDictionary();
+  const stopWord = defaultStopWord();
+  expect(dict.contains("abidin")).toEqual(true);
+  expect(stopWord.contains("tiba")).toEqual(true);
 });
 
 test("Testing default dictionary delete function", () => {
-  const newDict = new sastrawi.Dictionary(["mantab", "keren"]);
+  const newDict = new Dictionary(["mantab", "keren"]);
   newDict.add(["budi"]);
   expect(newDict.contains("budi")).toEqual(true);
   newDict.remove(["budi"]);
