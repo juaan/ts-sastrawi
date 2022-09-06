@@ -30,13 +30,13 @@ console.log(stemmer.stem("menyukai")); // suka
 Selain menggunakan kamus kata dasar default, user juga dapat membuat kamus kata dasar sendiri :
 
 ```javascript
-import {Dictionary, NewStemmer, tokenize} from "ts-sastrawi";
+import {Dictionary, Stemmer, tokenize} from "ts-sastrawi";
 
 const dictionaryCustom = new Dictionary(["aku", "ingin", "tahu"]);
 dictionaryCustom.add("gaul");
 console.log(dictionaryCustom.count()); // 4
 
-const stemmer = NewStemmer(dictionaryCustom);
+const stemmer = new Stemmer(dictionaryCustom);
 const sentence = "aku ingin mengetahui";
 const tokenizeWord = tokenize(sentence);
 
