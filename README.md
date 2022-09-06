@@ -1,5 +1,7 @@
 # ts-sastrawi
 
+[![AppVeyor build](https://img.shields.io/appveyor/build/juaan/ts-sastrawi)](https://ci.appveyor.com/project/juaan/ts-sastrawi)
+
 [![GitHub license](https://img.shields.io/github/license/juaan/ts-sastrawi)](https://github.com/juaan/ts-sastrawi/blob/master/LICENSE)
 
 ts-sastrawi is a typescript package for doing stemming in Indonesian language. It is based from [Sastrawi](https://github.com/sastrawi/sastrawi) for PHP by [Andy Librian](https://github.com/andylibrian).
